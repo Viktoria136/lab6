@@ -1,0 +1,17 @@
+sales = (12500, 9800, 15300, 11200, 18700, 21400, 8900)
+days = ("Понеділок", "Вівторок", "Середа", "Четвер", "П'ятниця", "Субота", "Неділя")
+print("Обсяги продажів за тиждень:")
+for day, value in zip(days, sales):
+    print(day, "-", value, "грн")
+print("Кількість показників:", len(sales))
+print("Найбільший показник:", max(sales), "грн")
+print("Найменший показник:", min(sales), "грн")
+total = sum(sales)
+average = total / len(sales)
+print("Загальна сума продажів:", total, "грн")
+print("Середнє значення:", round(average, 2), "грн")
+print("День з найбільшими продажами:", days[sales.index(max(sales))])
+print("День з найменшими продажами:", days[sales.index(min(sales))])
+print("Різниця між найбільшим і найменшим:", max(sales) - min(sales), "грн")
+print("Підсумок: за тиждень продано на", total, "грн, у середньому по",
+      round(average, 2), "грн на день.")
